@@ -18,10 +18,13 @@ public class Player
 
     public void ShowHand()
     {
+        int pos = 1;
+        string cardPos = string.Empty;
         foreach (Card card in Hand)
         {
             Console.Write($"{card.ToString()}\t");
+            cardPos += $"{pos++}\t";
         }
-        Console.WriteLine();
+        Console.WriteLine($"\n{cardPos}");
     }
 }
